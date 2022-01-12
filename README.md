@@ -2,7 +2,6 @@
 
 
 ## Tuples
-- definuje formát n-tice
 ```typescript
 const person: {
   role: [number, string]; // <-------------
@@ -242,7 +241,8 @@ extractAndConvert({ name: 'Max' }, 'name');
 
 
 ## Partial
-- slouží pro dočasné nastavení objektu jako volitelné proměnné
+- with partial type is possible to set required values of class/interface in multiple steps
+- after a new object is inited it can be converted back to the original class/interface
 ```typescript
 interface CourseGoal {
   title: string;
@@ -265,7 +265,7 @@ function createCourseGoal(
 
 
 ## Readonly
-- zajisti aby se promenna nemodifikovala
+- it protects variables from changes
 ```typescript
 const names: Readonly<string[]> = ['Max', 'Anna'];
 // names.push('Manu'); <------------------ error
